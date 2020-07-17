@@ -114,7 +114,7 @@ interface PenStroke {
   penWidth: number;
 }
 
-interface Square extends Shape, PenStroke {
+interface Squaree extends Shape, PenStroke {
   sideLength: number;
 }
 
