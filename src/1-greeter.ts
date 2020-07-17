@@ -42,3 +42,5 @@ console.log(greeter(user1));
 console.log(greeter(user2));
 console.log(greeter(user3));
 console.log(greeter(user4));
+
+export {};
