@@ -14,4 +14,23 @@ let rowan: User = {
   },
 };
 
+interface Canceler {
+  (message?: string): void;
+}
+
+interface CancelExecutor {
+  (canceler: Canceler): void;
+}
+
+let outsideCancel: Canceler;
+let executor: CancelExecutor = function (canceler) {
+  outsideCancel = canceler;
+};
+
+executor((message) => {
+  console.log(message);
+});
+
+outsideCancel!();
+
 export {};
